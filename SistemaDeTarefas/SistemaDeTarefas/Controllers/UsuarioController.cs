@@ -39,7 +39,7 @@ namespace SistemaDeTarefas.Controllers
 
         [HttpPut("{id}")]
         public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, int id)
-        {
+        {   
             usuarioModel.Id = id;
             UsuarioModel usuario = await _usuarioRepositorio.Atualizar(usuarioModel, id);
             return Ok(usuario);
