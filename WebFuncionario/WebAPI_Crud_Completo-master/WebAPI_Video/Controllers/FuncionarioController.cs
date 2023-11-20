@@ -18,7 +18,7 @@ namespace WebAPI_Video.Controllers
         [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> GetFuncionarios()
         {
-            return Ok( await _funcionarioInterface.GetFuncionarios());
+            return Ok(await _funcionarioInterface.GetFuncionarios());
         }
 
         [HttpGet("{id}")]
@@ -53,7 +53,7 @@ namespace WebAPI_Video.Controllers
 
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> DeleteFuncionario(int id)
         {
             ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioInterface.DeleteFuncionario(id);
