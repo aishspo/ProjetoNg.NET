@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Funcionario } from '../../models/Funcionarios';
 import { HttpClientModule } from '@angular/common/http';
+import { Event } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -34,5 +35,9 @@ export class HomeComponent implements OnInit {
       this.funcionarios = data.dados;
       this.funcionariosGeral = data.dados;
     });
+  }
+
+  search(event: Event) {
+    console.log(event)
   }
 }
