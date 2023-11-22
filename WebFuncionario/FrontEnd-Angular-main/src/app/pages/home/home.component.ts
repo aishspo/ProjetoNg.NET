@@ -37,7 +37,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  search(event: Event) {
-    console.log(event)
-  }
+  /* search(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+
+    this.funcionarios = this this.funcionariosGeral.filter(funcionario =>{
+      return funcionario.nome.toLowerCase().includes(value);
+    })
+  } */
 }
