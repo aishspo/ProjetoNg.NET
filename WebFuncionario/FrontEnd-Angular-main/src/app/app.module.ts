@@ -5,17 +5,18 @@ import { AppComponent }  from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
-  imports: [ 
-    BrowserModule, 
-    HttpClientModule 
-  ],
   declarations: [
     
   ],
-  bootstrap: [
-    
-  ]
+  imports: [ 
+    BrowserModule, 
+    HttpClientModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: []
 })
 export class AppModule { }
