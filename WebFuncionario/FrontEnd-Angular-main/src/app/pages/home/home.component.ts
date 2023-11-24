@@ -3,15 +3,16 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Funcionario } from '../../models/Funcionarios';
 import { HttpClientModule } from '@angular/common/http';
-import { Event } from '@angular/router';
+import { Event, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, RouterLink],
   providers:[FuncionarioService],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 
 export class HomeComponent implements OnInit {
@@ -37,12 +38,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  /* search(event: Event) {
+  search(event: any) {
     const target = event.target as HTMLInputElement;
     const value = target.value.toLowerCase();
 
-    this.funcionarios = this this.funcionariosGeral.filter(funcionario =>{
+    this.funcionarios = this.funcionariosGeral.filter(funcionario =>{
       return funcionario.nome.toLowerCase().includes(value);
     })
-  } */
+  } 
 }
