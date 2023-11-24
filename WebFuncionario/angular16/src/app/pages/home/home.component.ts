@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Funcionario } from 'src/app/models/Funcionarios';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
 
@@ -8,7 +8,7 @@ import { FuncionarioService } from 'src/app/services/funcionario.service';
   styleUrls: ['./home.component.css'],
   providers: [FuncionarioService],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   funcionarios: Funcionario[] = [];
 
   // busca de funcionários
@@ -30,12 +30,12 @@ export class HomeComponent {
     });
   }
 
-  /* search(event: Event) {
+  search(event: Event) {
     const target = event.target as HTMLInputElement;
     const value = target.value.toLowerCase();
 
-    this.funcionarios = this this.funcionariosGeral.filter(funcionario =>{
+    this.funcionarios = this.funcionariosGeral.filter(funcionario =>{
       return funcionario.nome.toLowerCase().includes(value);
     })
-  } */
+  }
 }
