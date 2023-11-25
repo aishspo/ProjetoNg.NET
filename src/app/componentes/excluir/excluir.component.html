@@ -1,0 +1,24 @@
+<div class="container" *ngIf="funcionario">
+
+  <h1>Deseja confirmar a exclusão?</h1>
+
+  <div class="del-details">
+    <h2>Funcionário:</h2>
+    <p>{{ funcionario.nome }}</p>
+
+    <h2>Departamento:</h2>
+    <p>{{ funcionario.departamento }}</p>
+
+  </div>
+
+  <div>
+    <button class="del-btn" (click)="Excluir()">
+      Confirmar exclusão
+    </button>
+
+    <button (click)="Cancelar()">
+      Voltar
+    </button>
+  </div>
+
+</div>
