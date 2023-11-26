@@ -1,0 +1,56 @@
+<div class="container">
+  <h1 class="heading">Funcionários</h1>
+
+  <div class="funcionario-box">
+    <button class="cadastro-btn">
+      <a routerLink="/cadastro">Cadastrar novo funcionário</a>
+    </button>
+
+    <div class="input-box">
+      <label>Procurar:</label>
+      <input type="text" placeholder="Qual registro está buscando?" (input)="search($event)">
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Departamento</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let funcionario of funcionarios">
+
+      <tr>
+        <td>
+          <div *ngIf="funcionario.ativo == true; else inativo">
+            <span class="dot-active"></span>
+          </div>
+
+          <div #inativo>
+            <span class="dot-inactive"></span>
+          </div>
+        </td>
+
+        <td>{{ funcionario.nome }}</td>
+        <td>{{ funcionario.sobrenome }}</td>
+        <td>{{ funcionario.departamento }}</td>
+
+        <div class="buttons">
+          <td>
+            <button routerLink="['/editar', funcionario.id]">Editar</button>
+              <button routerLink="['/detalhes', funcionario.id]">Detalhes</button>
+          </td>
+
+          <td>
+            <button class="del-btn" (click)="OpenDialog(funcionario.id!)">Excluir</button>
+          </td>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
