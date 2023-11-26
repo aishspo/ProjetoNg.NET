@@ -5,12 +5,13 @@ import { Funcionario } from '../../models/Funcionarios';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-funcionario-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatOptionModule],
+  imports: [CommonModule, ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatOptionModule, RouterLink, ],
   templateUrl: './funcionario-form.component.html',
   styleUrls: ['./funcionario-form.component.css']
 })
@@ -40,13 +41,10 @@ export class FuncionarioFormComponent implements OnInit {
       ativo: new FormControl(this.dadosFuncionario ? this.dadosFuncionario.ativo : true),
       dataDeCriacao: new FormControl(new Date()),
       dataDeAlteracao: new FormControl(new Date())
-
     });
   }
 
   submit() {
     this.onSubmit.emit(this.funcionarioForm.value);
   }
-
 }
-

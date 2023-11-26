@@ -6,25 +6,24 @@ import { FuncionarioFormComponent } from "../../componentes/funcionario-form/fun
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-cadastro',
-    standalone: true,
-    templateUrl: './cadastro.component.html',
-    styleUrls: ['./cadastro.component.css'],
-    imports: [CommonModule, FuncionarioFormComponent]
+  selector: 'app-cadastro',
+  standalone: true,
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css'],
+  imports: [CommonModule, FuncionarioFormComponent]
 })
 
 export class CadastroComponent {
 
-btnAcao = "Cadastrar"
-btnTitulo = "Cadastrar funcionário"
+  btnAcao = "Cadastrar"
+  btnTitulo = "Cadastrar funcionário"
 
-  constructor(private FuncionarioService: FuncionarioService, private router: Router) {
+  constructor(private FuncionarioService: FuncionarioService, private router: Router) {}
 
+  createFuncionario(funcionario: Funcionario) {
+    this.FuncionarioService.CreateFuncionario(funcionario).subscribe((data) => {
+      console.log(data);
+      /* this.router.navigate(['/']) */
+    });
   }
-
-    createFuncionario(funcionario: Funcionario) {
-      this.FuncionarioService.CreateFuncionario(funcionario).subscribe((data) => {
-        this.router.navigate(['/'])
-      });
-    }
 }
