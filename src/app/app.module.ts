@@ -30,14 +30,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CadastroComponent,
     EditarComponent,
     FuncionarioFormComponent,
-    BrowserAnimationsModule,
     ExcluirComponent,
   ],
 
   providers: [
     provideClientHydration()
   ],
-
 
   // bootstrap: [ AppComponent ]
 })

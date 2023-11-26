@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Funcionario } from '../../models/Funcionarios';
 
-
 @Component({
   selector: 'app-detalhes',
   standalone: true,
@@ -17,9 +16,7 @@ export class DetalhesComponent implements OnInit {
 funcionario?: Funcionario;
 id!: number;
 
-constructor(private FuncionarioService: FuncionarioService, private route: ActivatedRoute, private router: Router) {
-
-}
+constructor(private FuncionarioService: FuncionarioService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));

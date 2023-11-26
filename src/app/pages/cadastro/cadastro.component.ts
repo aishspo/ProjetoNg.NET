@@ -18,14 +18,11 @@ export class CadastroComponent {
 btnAcao = "Cadastrar"
 btnTitulo = "Cadastrar funcionário"
 
+  constructor(private FuncionarioService: FuncionarioService, private router: Router) { }
 
-  constructor(private FuncionarioService: FuncionarioService, private router: Router) {
-
+  createFuncionario(funcionario: Funcionario) {
+    this.FuncionarioService.CreateFuncionario(funcionario).subscribe((data) => {
+      this.router.navigate(['/'])
+    });
   }
-
-    createFuncionario(funcionario: Funcionario) {
-      this.FuncionarioService.CreateFuncionario(funcionario).subscribe((data) => {
-        this.router.navigate(['/'])
-      });
-    }
 }

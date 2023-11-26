@@ -1,7 +1,7 @@
 import { FuncionarioService } from './../../services/funcionario.service';
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Funcionario } from '../../models/Funcionarios';
 
 @Component({
@@ -9,6 +9,7 @@ import { Funcionario } from '../../models/Funcionarios';
   templateUrl: './excluir.component.html',
   styleUrl: './excluir.component.css'
 })
+
 export class ExcluirComponent implements OnInit {
 
   inputdata: any;

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Funcionario } from '../../models/Funcionarios';
 
-
 @Component({
   selector: 'app-funcionario-form',
   standalone: true,
@@ -41,6 +40,6 @@ export class FuncionarioFormComponent implements OnInit {
 
   submit() {
     this.onSubmit.emit(this.funcionarioForm.value);
-}
+  }
 
 }
