@@ -19,6 +19,7 @@ import{ MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { ExcluirComponent } from './componentes/excluir/excluir.component'
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ExcluirComponent } from './componentes/excluir/excluir.component'
     DetalhesComponent,
     EditarComponent,
     FuncionarioFormComponent,
-    
+
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -43,6 +44,7 @@ import { ExcluirComponent } from './componentes/excluir/excluir.component'
     MatButtonModule,
     MatCardModule,
     MatInputModule,
+    MatDialogModule
 
   ],
   providers: [],

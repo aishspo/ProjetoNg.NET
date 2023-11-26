@@ -7,6 +7,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html, app-home {
+  height: 100%;
+  width: auto;
+  margin-inline: 20%;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -17,6 +23,10 @@ h2 {
   font-weight: 600;
 }
 
+label {
+  padding-inline-end: .5rem;
+}
+
 input {
   padding-inline: .5rem;
   padding-block: .5rem;
@@ -25,18 +35,19 @@ input {
   background-color: #efefd0;
 }
 
+
 button {
   border: none;
   padding-inline: 1rem;
   padding-block: .5rem;
   border-radius: 10px;
-  background-color: hsl(206, 72%, 36%);
+  background-color: hsl(206, 72%, 43%);
   margin-inline: .5rem;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: hsl(206, 72%, 28%);
+  background-color: hsl(206, 73%, 36%);
   transition: .5s;
 }
 
@@ -82,7 +93,6 @@ select {
 }
 
 .container {
-  margin-inline: 20%;
   margin-block: 2rem;
   padding: 1rem;
   background-color: hsl(50, 70%, 80%);
@@ -92,8 +102,4 @@ select {
   align-items: center;
   justify-content: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.heading {
-    margin-left: .5rem;
 }

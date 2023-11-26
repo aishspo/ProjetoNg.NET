@@ -1,4 +1,6 @@
-mat-card{
-  padding: 25px;
-  background-color: rgb(189, 189, 189);
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-left: .5rem;
 }

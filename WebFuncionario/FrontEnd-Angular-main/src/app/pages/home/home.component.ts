@@ -1,6 +1,6 @@
 import { FuncionarioService } from './../../services/funcionario.service';
-import { Component, Input, OnInit } from '@angular/core';
-import { CommonModule, NgFor, NgIf } from '@angular/common';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { CommonModule, NgFor, NgIf, NgIfContext } from '@angular/common';
 import { Funcionario } from '../../models/Funcionarios';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
@@ -26,8 +26,9 @@ export class HomeComponent implements OnInit {
   funcionariosGeral: Funcionario[] = [];
 
   colunas = ['Situação', 'Nome', 'Sobrenome', 'Departamento', ' Ações', 'Excluir']
+  funcionario: any;
 
-  constructor( 
+  constructor(
     private FuncionarioService: FuncionarioService,
     public dialog: MatDialog
   ) {}
@@ -53,7 +54,7 @@ export class HomeComponent implements OnInit {
     this.funcionarios = this.funcionariosGeral.filter(funcionario =>{
       return funcionario.nome.toLowerCase().includes(value);
     })
-  } 
+  }
 
   OpenDialog(id: number) {
     this.dialog.open(ExcluirComponent, {

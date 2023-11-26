@@ -4,3 +4,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-left: .5rem;
+}
